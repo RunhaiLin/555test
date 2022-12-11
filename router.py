@@ -203,16 +203,16 @@ def router_handler(rt_object, packet, packet_in):
 				flag = False
 				
 				rip = IPAddr('0.0.0.0')
-				#for key in rt_object.routermac:
+				for key in rt_object.routermac:
 					#print(rt_object.routermac[key])
-				#	if (rt_object.routermac[key] ==destinmac):
-				#		rip = key
-				#		flag = True
+					if (rt_object.routermac[key] ==destinmac):
+						rip = key
+						flag = True
 				
-				if (destinip in rt_object.subnet):
-					flag = True
-				#if (destinip == IPAddr('8.8.8.8')):
-				#	flag = False
+				#if (destinip in rt_object.subnet):
+				#	flag = True
+				if (destinip == IPAddr('8.8.8.8')):
+					flag = False
 				if (flag):
 					print("Helping ICMP request find the host",destinip)
 					a = arp()
