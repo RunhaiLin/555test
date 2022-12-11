@@ -44,11 +44,12 @@ class Tutorial (object):
     self.mac_to_port = {}
     self.ip_to_mac = {}
     self.routermac = {
-      IPAddr("10.0.0.1"):EthAddr("02:00:de:ad:be:11"),
-      IPAddr("20.0.0.1"):EthAddr("02:00:de:ad:be:12"),
-      IPAddr("30.0.0.1"):EthAddr("02:00:de:ad:be:13")
+      IPAddr("10.0.0.1"):EthAddr("02:00:DE:AD:BE:11"),
+      IPAddr("20.0.0.1"):EthAddr("02:00:DE:AD:BE:12"),
+      IPAddr("30.0.0.1"):EthAddr("02:00:DE:AD:BE:13")
     }
     self.buff = {}
+    self.subnet = [IPAddr("10.0.0.1"),IPAddr("20.0.0.1"),IPAddr("30.0.0.1")]
   
 
     """
